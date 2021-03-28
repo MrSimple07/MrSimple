@@ -1,0 +1,193 @@
+.works{
+    padding: 100px 0;
+    color: black;
+
+    &__title{
+        text-align: center;
+        display: grid;
+        justify-content: center;
+
+        &-text{
+        padding-top: 30px;
+        letter-spacing: 3px;
+        text-align: center;
+        font-size: 35px;
+        font-weight: 700;
+        position: relative;
+        }
+        &-line{
+            background-color: black;
+            margin-top: 25px;
+            height: 3px;
+            width: 250px;
+         } 
+    }
+
+
+    &__content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+        text-align: center;
+        padding-top: 110px;
+        margin-left: 20px;
+
+    }
+
+    &__box{
+        cursor: pointer;
+        position: relative;
+        transition: all ease 0.3s;
+
+        &:hover{
+            .works__box-img{
+                transform: translate3d(0,0,0);
+                opacity: 0.6;
+            }
+            .works__box-text{
+                top: -50%;
+            }
+            .works__box-subtitle{
+                opacity: 1;
+            }
+        }
+        &-img{
+            width: 700px;
+            height: 500px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0px 0px 10px;
+            transition: all ease 0.3s;
+            position: relative;
+            opacity: 0.8;
+            transform: translate3d(-20px, 10px, 10px);
+        }
+
+
+        &-text{
+            position: relative;
+            top: -56%;
+            font-size: 20px;
+            transition: all ease 0.3s;
+        }
+
+        &-title{
+            font-size: 40px;
+            font-weight: 700;
+            transition: all ease 0.3s;
+            text-align: center;
+        }
+
+        &-subtitle{
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+    }
+}
+
+@media screen and (max-width: 1210px){
+    .works{
+        &__box{
+            &-img{
+                width: 500px;
+                height: 400px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 900px){
+    .works{
+        &__box{
+
+            &:hover{
+                .works__box-img{
+                    transform: translate3d(0,0,0);
+                    opacity: 0.6;
+                }
+                .works__box-text{
+                    top: 45%;
+                }
+                .works__box-subtitle{
+                    opacity: 1;
+                }
+            }
+            &-img{
+                width: 400px;
+                height: 300px;
+            }
+
+            &-title{
+                font-size: 30px;
+            }
+            &-subtitle{
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 776px){
+    .works{
+        &__content{
+            display: block;
+            text-align: center;
+           
+            &-text{
+                &-title{
+                    font-size: 38px;
+                }
+            }
+        }
+        &__box{
+            margin-bottom: 30px;
+            &-img{
+                width: 350px;
+            }
+
+            &-text{
+                position: absolute;
+                top: 40%;
+                left: 24%;
+            }
+
+            &-title{
+                font-size: 30px;
+            }
+            &-subtitle{
+                font-size: 14px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 776px){
+    .works{
+        &__content{
+            display: block;
+            text-align: center;
+           
+            &-text{
+                &-title{
+                    font-size: 34px;
+                }
+            }
+        }
+        &__box{
+            margin-bottom: 30px;
+            &-img{
+                width: 300px;
+            }
+
+            &-text{
+                position: absolute;
+                top: 40%;
+                left: 8%;
+            }
+
+            &-title{
+                font-size: 30px;
+            }
+            &-subtitle{
+                font-size: 14px;
+            }
+        }
+    }
+}

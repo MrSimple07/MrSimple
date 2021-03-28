@@ -1,0 +1,171 @@
+.skills {
+  padding: 100px 0;
+  color: black;
+}
+.skills__title {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+}
+.skills__title-text {
+  padding-top: 30px;
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  position: relative;
+}
+.skills__title-line {
+  background-color: black;
+  margin-top: 25px;
+  height: 3px;
+  width: 250px;
+}
+.skills__content {
+  display: flex;
+  justify-content: space-around;
+  padding: 110px 0px;
+}
+.skills__text {
+  width: calc(50% - 30px);
+}
+.skills__text-title {
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.skills__items {
+  width: calc(50% - 30px);
+}
+.skills__item-info {
+  display: flex;
+  justify-content: space-between;
+}
+.skills__item-info span {
+  font-weight: 600;
+  font-size: 20px;
+}
+.skills__item-line {
+  background-color: lightgrey;
+  width: 100%;
+  height: 3px;
+  position: relative;
+}
+.skills__item-line.html::before {
+  content: "";
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 90%;
+  left: 0;
+  background: crimson;
+}
+.skills__item-line.css::before {
+  content: "";
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 70%;
+  left: 0;
+  background: crimson;
+}
+.skills__item-line.js::before {
+  content: "";
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 40%;
+  left: 0;
+  background: crimson;
+}
+.skills__item-line.react::before {
+  content: "";
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  left: 0;
+  background: crimson;
+}
+
+.hire {
+  text-align: center;
+  background-image: url("../img/pattern.jpg");
+  color: white;
+}
+.hire__content {
+  padding: 110px 0px;
+}
+.hire__title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.hire__subtitle {
+  margin-bottom: 55px;
+  font-size: 20px;
+}
+.hire__btn {
+  font-size: 20px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.hire__btn:hover {
+  letter-spacing: 2px;
+  background: white;
+  color: black;
+}
+
+.footer {
+  background-color: #222;
+}
+.footer__content {
+  padding-top: 10px;
+}
+.footer__text {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+.footer__text span {
+  font-size: 22px;
+  color: crimson;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 776px) {
+  .skills__content {
+    display: block;
+    text-align: center;
+  }
+  .skills__text {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .skills__items {
+    width: 100%;
+  }
+  .skills__box {
+    margin-bottom: 50px;
+    padding: 50px;
+  }
+  .skills__box:hover {
+    padding: 60px;
+  }
+  .skills__box-title {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .footer__text {
+    font-size: 16px;
+  }
+  .footer__text span {
+    font-size: 21px;
+  }
+}

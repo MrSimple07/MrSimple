@@ -1,0 +1,124 @@
+$boxBack : #503bff;
+$boxBackTwo: #8293ff;
+$hoverBgColor : #503bff;
+$hoverBgColor2: #8293ff;
+
+
+
+.services{
+    padding: 100px 0;
+    background: #333;
+    color: white;
+    transform: translateX(-100%);
+    transition: all ease 1s;
+
+    &.active{
+        transform: translateX(0%);
+    }
+
+    &__title{
+        text-align: center;
+        display: grid;
+        justify-content: center;
+
+        &-text{
+        padding-top: 30px;
+        letter-spacing: 3px;
+        text-align: center;
+        font-size: 35px;
+        font-weight: 700;
+        position: relative;
+        }
+        &-line{
+            background-color: white;
+            margin-top: 25px;
+            height: 3px;
+            width: 250px;
+         } 
+    }
+    &__content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 30px;
+        text-align: center;
+        padding: 110px;
+}
+
+    &__box{
+        cursor: pointer;
+        border: 1px solid;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px $boxBack;
+        color: #8293ff;
+        transition: all ease 0.4s;
+
+        &:hover{
+            background: linear-gradient(130deg, $hoverBgColor 0%, $hoverBgColor2 100%);
+            box-shadow: none;
+            color: white;
+            padding: 10px;
+        }
+       
+        .fa.fa-paint-brush, .fa.fa-laptop, .fas.fa-question{
+            font-size: 40px;
+        }
+        
+
+        &-title{
+            font-size: 25px;
+            padding: 20px 0px;
+        }
+
+
+        &-text{
+           font-size: 20px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 776px){
+    .services{
+        &__content{
+            display: block;
+        }
+
+        &__box{
+            margin-bottom: 50px;
+            padding: 50px;
+
+            &:hover{
+                padding: 60px;
+            }
+
+            &-title{
+                font-size: 30px;
+            }
+
+        }
+    }
+}
+@media screen and (max-width: 776px){
+    .services{
+        &__content{
+            display: block;
+            margin-top: 60px;
+            padding: 0;
+        }
+
+        &__box{
+            margin-bottom: 50px;
+            padding: 50px;
+
+            &:hover{
+                padding: 60px;
+            }
+
+            &-title{
+                font-size: 30px;
+            }
+
+        }
+    }
+}

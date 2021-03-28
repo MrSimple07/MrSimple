@@ -1,0 +1,310 @@
+.home{
+        background-image: url('../img/backColor.jpg');
+        backdrop-filter: blur(2px);
+        background-color: #222;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+        z-index: 1;
+
+        &__blur{
+            backdrop-filter: blur(5px);
+            width: 100%;
+            height: 100%;
+        }
+
+        &__content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            &-text{
+                color: white;
+                text-align: justify;
+                padding-left: 60px;
+
+                &-intro{
+                    font-size: 34px;
+                }
+
+                &-subtitle{
+                    font-size: 40px;
+
+                    & span{
+                        color: crimson;
+                        font-weight: 700;
+                    }
+                }
+                &-title{
+                    font-size: 75px;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+}
+
+.scroll-down{
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-left: -15px;
+    display: block;
+    z-index: 10;
+    text-align: center;
+
+    & span{
+        position: relative;
+        color: #fff;
+        font-size: 10px;
+        -webkit-animation-name: drop;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-play-state: running;
+        animation-name: drop;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+
+        @keyframes drop {
+            0% {
+                top: 0px;
+                opacity: 0;
+            }
+        
+            30% {
+                top: 10px;
+                opacity: 1;
+            }
+            100% {
+                top: 25px;
+                opacity: 0;
+            }
+        }
+        
+
+        & a{
+            color: white;
+            text-decoration: none;
+
+            & i{
+                transform: translate(0, 0);
+            }
+        }
+    }
+}
+
+
+
+.about{
+    padding: 100px 0;
+    opacity: 0;
+    transition: all ease-out 1.3s;
+
+    &.active{
+        opacity: 1;
+    }
+
+    &__title{
+        text-align: center;
+        display: grid;
+        justify-content: center;
+        &-text{
+        padding-top: 30px;
+        letter-spacing: 3px;
+        text-align: center;
+        font-size: 35px;
+        font-weight: 700;
+        position: relative;
+        }
+        &-line{
+            background-color: #111;
+            margin-top: 25px;
+            height: 3px;
+            width: 250px;
+         } 
+    }
+    &__content{
+        display: flex;
+        padding: 110px;
+        align-items: center;
+
+
+        &-img{
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        &-text{
+            padding-left: 40px;
+
+            &-title{
+                font-weight: 700;
+                font-size: 30px;
+            }
+            p{
+                font-size: 20px;
+                padding-top: 25px;
+                margin-bottom: 35px;
+                text-align: justify;
+            }
+            &-link{
+                color: white;
+                background-color: crimson;
+                text-decoration: none;
+                font-size: 24px;
+                font-weight: 400;
+                cursor: pointer;
+                border: 2px solid crimson;
+                border-radius: 12px;
+                padding: 15px;
+                transition: 0.3s ease-in all;
+
+                &:hover{
+                    color: crimson;
+                    background-color: white;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 970px){
+    .home{
+        height: 130vh;
+        &__content{
+            
+            &-text{
+                &-intro{
+                    font-size: 26px;
+                }
+                &-title{
+                    font-size: 60px;
+                }
+                &-subtitle{
+                    font-size: 30px;
+                }
+            }
+        }
+
+        &__box{
+            margin-bottom: 50px;
+            padding: 50px;
+
+            &:hover{
+                padding: 60px;
+            }
+
+            &-title{
+                font-size: 30px;
+            }
+
+        }
+    }
+
+
+    .about{
+        &__content{
+            
+            padding: 50px;
+            margin-top: 50px;
+            &-img{
+                width: 300px;
+               height: 300px;
+            }
+
+            &-text-title{
+                font-size: 24px;
+            }
+            &-text p{
+                font-size: 16px;
+                padding-top: 5px;
+            }
+            &-text-link{
+                font-size: 20px;
+                padding: 10px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px){
+    .home{
+        &__content{
+            
+            &-text{
+                padding: 0;
+                &-intro{
+                    font-size: 22px;
+                }
+                &-title{
+                    font-size: 40px;
+                }
+                &-subtitle{
+                    font-size: 23px;
+                }
+            }
+        }
+
+        &__box{
+            margin-bottom: 50px;
+            padding: 50px;
+
+            &:hover{
+                padding: 60px;
+            }
+
+            &-title{
+                font-size: 30px;
+            }
+
+        }
+    }
+
+
+    .about{
+        &__content{
+            display: block;
+            padding: 50px;
+            margin-top: 50px;
+
+            &-img{
+                width: 100%;
+            }
+
+            &-text{
+                padding: 0;
+            }
+
+            &-text-title{
+                font-size: 24px;
+            }
+            &-text p{
+                font-size: 16px;
+                padding-top: 5px;
+            }
+            &-text-link{
+                font-size: 20px;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+
+
+
+

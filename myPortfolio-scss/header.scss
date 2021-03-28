@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;;
+}
+
+.container__inner{
+    padding: 0 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.header{
+    position: fixed;
+    font-family: 'ubuntu', sans-serif;
+    width: 100%;
+    padding: 40px 0;
+    z-index: 1000;
+    transition: all ease 0.3s;
+    color: white;
+
+    &.active{
+        padding: 20px;
+        background-color: #333;
+    }
+
+    &__content{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &__logo{
+        margin: 10px;
+        font-weight: 600;
+        color: white;
+        font-size: 36px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    &__list{
+        display: flex;
+
+        &-item{
+            margin-right: 25px;
+            list-style: none;
+        }
+    }
+  
+    &__link{
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+        cursor: pointer;
+        
+        &::after{
+            content: '';
+            display: block;
+            background-color: white;
+            width: 0;
+            height: 3px;
+            transition: width ease 0.3s;
+        }
+
+        &:hover::after{
+            width: 100%;
+        }
+    }
+}
+
+.toggle-button{
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px ;
+}
+
+
+
+@media screen and (max-width: 776px){
+    .toggle-button{
+        display: flex;
+        z-index: 200000;
+    }
+
+    .header{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 0px;
+
+        &__content{
+            display: block;
+        }
+
+        &__logo{
+            font-size: 30px;
+        }
+
+        &__menu{
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            left: -100%;
+            top: 0;
+            background: #111;
+            text-align: center;
+            padding-top: 80px;
+            transition: all 0.3s ease;
+
+            &.active{
+                left: 0;
+            }
+        }
+
+        
+
+        &__list{
+            flex-direction: column;
+            width: 100%;
+
+            &-item{
+                text-align: center;
+            }
+        }
+
+        &__link{
+            padding: 10px 15px;
+        }
+    }
+}
