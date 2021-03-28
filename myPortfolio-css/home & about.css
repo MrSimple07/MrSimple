@@ -165,9 +165,6 @@
 }
 
 @media screen and (max-width: 970px) {
-  .home {
-    height: 130vh;
-  }
   .home__content-text-intro {
     font-size: 26px;
   }
